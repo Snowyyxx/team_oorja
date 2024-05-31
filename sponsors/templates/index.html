@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block title %}Our Sponsors{% endblock %}
+
+{% block content %}
+<div class='container-background'>
+    <h1 class='heading'>Our Sponsors</h1>
+    {% for sponsor in sponsors %}
+        <div class='sponsor-section'>
+            <div class='image-container'>
+                <img src="{{ sponsor.sponsor_image }}" alt="{{ sponsor.sponsor_name }}">
+            </div>
+            <div class='sponsor-info'>
+                <h2>{{ sponsor.sponsor_name }}</h2>
+                <p>{{ sponsor.sponsor_description }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<br>
+<div class='footer'>
+    <div class='footer-left'>
+        <h2>Team Oorja</h2>
+        <p>From solar car to electric Go-Kart, Team Oorja has designed and fabricated multiple
+            projects which competed in national level competition that brought laurels to the University.</p>
+        
+    </div>
+    <div class='footer-middle'>
+        <h3>Useful Links</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Team Essentials</a></li>
+            <li><a href="#">Alumni</a></li>
+            <li><a href="#">Team</a></li>
+        </ul>
+    </div>
+    <div class='footer-right'>
+        <h3>Contact Us</h3>
+        <p>Team Oorja Thapar Institute Of Engineering and Technology, Patiala, 147004.</p>
+        <p><strong>Phone:</strong> 7694848025</p>
+        <p><strong>Email:</strong> Team_oorja@Thapar.Edu</p>
+    </div>
+</div>
+
+<style>
+    .container-background {
+        background-color: #1c2f45;
+        padding: 20px;
+    }
+
+    .heading {
+        text-align: center;
+        color: #ECF0F1;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+    }
+
+    .sponsor-section {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        padding: 20px;
+        background-color: #1c2f45;
+        border-radius: 8px;
+    }
+
+    .image-container {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+    }
+
+    .sponsor-info {
+        flex: 2;
+        color: #ECF0F1;
+    }
+
+    .sponsor-info h2 {
+        margin-top: 0;
+        font-size: 2em;
+        color: #ECF0F1;
+    }
+
+    .sponsor-info p {
+        margin-top: 10px;
+        font-size: 1.2em;
+        color: #BDC3C7;
+    }
+
+    .footer {
+        background-color: #1c2f45;
+        padding: 20px;
+        display: flex;
+        color: white;
+        width: 100%;
+        
+        justify-content: space-between;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    .footer-left {
+        max-width: 30%;
+    }
+
+    .footer-left h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .footer-left p {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .footer-middle {
+        max-width: 20%;
+    }
+
+    .footer-middle h3 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .footer-middle ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-middle ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-middle ul li a {
+        color: #ECF0F1;
+        text-decoration: none;
+    }
+
+    .footer-right {
+        max-width: 30%;
+    }
+
+    .footer-right h3 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .footer-right p {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .social-icons a img {
+        width: 24px;
+        height: 24px;
+    }
+</style>
+{% endblock %}
